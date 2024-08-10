@@ -1,3 +1,32 @@
+"""
+Faça um programa que peça ao usuário para digitar um número inteiro,
+informe se este número é par ou ímpar. Caso o usuário não digite um número
+inteiro, informe que não é um número inteiro.
+"""
+try:
+    numero = input("Digite um numero inteiro: ")
+
+    int_numero = int(numero)
+
+    divisao_inteira = int_numero % 2 == 0
+
+    if divisao_inteira:
+        print(f"O numero {int_numero} é par")
+    else:
+        print(f"O numero {int_numero} é impar")
+
+except:
+    print("Numero não é inteiro")
+
+"""
+Faça um programa que pergunte a hora ao usuário e, baseando-se no horário 
+descrito, exiba a saudação apropriada. Ex. 
+Bom dia 0-11, Boa tarde 12-17 e Boa noite 18-23.
+"""
+hora = input("Informe o horario: ")
+
+float_horario = float(hora)
+
 bom_dia = float_horario >= 0 and float_horario <= 11
 boa_tarde = float_horario >= 12 and float_horario <= 17
 boa_noite = float_horario >= 18 and float_horario <= 23
